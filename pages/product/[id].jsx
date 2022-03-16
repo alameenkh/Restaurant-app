@@ -39,7 +39,33 @@ const Product = () => {
                 <div className={styles.size} onClick={()=>setSize(2)}>
                     <Image src="/img/size.png" layout="fill"></Image>
                     <span className={styles.number}>Large</span>
+                    
                 </div>
+            </div>
+            <h3 className={styles.choose}>Choose Additional Ingredients</h3>
+            <div className={styles.ingredients}>
+                <div className={styles.option}>
+                    <input type="checkbox" id="double" name="double" className={styles.checkbox}/>
+                    <label htmlFor="double">double ingredients</label>
+                </div>
+                <div className={styles.option}>
+                    <input type="checkbox" id="double" name="double" className={styles.checkbox}/>
+                    <label htmlFor="double">Extra Cheese</label>
+                </div>
+                <div className={styles.option}>
+                    <input type="checkbox" id="double" name="double" className={styles.checkbox}/>
+                    <label htmlFor="double">Add Sweat Corn</label>
+                </div>
+            </div>
+            <div className={styles.add}>
+                <input
+                    type="number"
+                    defaultValue={1}
+                    className={styles.quantity}
+                />
+                <button className={styles.button}>
+                    Add to Cart
+                </button>
             </div>
         </div>
     </div>
