@@ -7,7 +7,7 @@ export const ProductList = () => {
       <h1 className={styles.title}>Best Restaurant Snack Ever</h1>
       <p className={styles.desc}>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+      Lorem Ipsum has been the industry standard dummy text ever since the 1500s
       </p>
       <div className={styles.wrapper}>
         <Pizza/>

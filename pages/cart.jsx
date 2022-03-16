@@ -27,7 +27,7 @@ const Cart = () => {
               </div>
             </td>
             <td>
-              <span className={styles.name}>Ameen's Pizza</span>
+              <span className={styles.name}>Ameen Pizza</span>
             </td>
             <td>
               <span className={styles.extras}>
@@ -56,7 +56,7 @@ const Cart = () => {
               </div>
             </td>
             <td>
-              <span className={styles.name}>Ameen's Pizza</span>
+              <span className={styles.name}>Ameen Pizza</span>
             </td>
             <td>
               <span className={styles.extras}>

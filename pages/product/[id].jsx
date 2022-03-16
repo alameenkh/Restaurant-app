@@ -2,6 +2,10 @@ import Image from 'next/image'
 import { useState } from 'react'
 import styles from '../../styles/Product.module.css'
 
+const handleClick = () => {
+    
+}
+
 
 const Product = () => {
   const pizza = {
@@ -29,15 +33,15 @@ const Product = () => {
             <h3 className={styles.choose}>Choose Your Size</h3>
             <div className={styles.sizes}>
                 <div className={styles.size} onClick={()=>setSize(0)}>
-                    <Image src="/img/size.png" layout="fill"></Image>
+                    <Image src="/img/size.png" layout="fill" alt=""></Image>
                     <span className={styles.number}>Small</span>
                 </div>
                 <div className={styles.size} onClick={()=>setSize(1)}>
-                    <Image src="/img/size.png" layout="fill"></Image>
+                    <Image src="/img/size.png" layout="fill" alt=""></Image>
                     <span className={styles.number}>Medium</span>
                 </div>
                 <div className={styles.size} onClick={()=>setSize(2)}>
-                    <Image src="/img/size.png" layout="fill"></Image>
+                    <Image src="/img/size.png" layout="fill" alt=""></Image>
                     <span className={styles.number}>Large</span>
                     
                 </div>
@@ -59,11 +63,12 @@ const Product = () => {
             </div>
             <div className={styles.add}>
                 <input
+                    onChange={(e) => setQuantity(e.target.value)}
                     type="number"
                     defaultValue={1}
                     className={styles.quantity}
                 />
-                <button className={styles.button}>
+                <button className={styles.button} onClick={handleClick}>
                     Add to Cart
                 </button>
             </div>
