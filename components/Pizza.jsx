@@ -2,19 +2,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Pizza.module.css'
 
-const Pizza = () => {
+const Pizza = ({pizza}) => {
+  console.log("the pizza is", pizza)
   return (
-    <Link  href="/product/123" passHref>
+    // <Link  href="/pizza/123" passHref>
     <div className={styles.container}>
-
+<Link  href={`/product/${pizza._id}`} passHref>
 <Image src="/img/pizza.png" alt="" width="500" height="500"/>
-<h1 className={styles.title}>Lorem Ipsum</h1>
-<span className={styles.price}>RS 120</span>
+
+</Link>
+<h1 className={styles.title}>{pizza.title}</h1>
+<span className={styles.price}>{pizza.prices[0]}</span>
 <p className={styles.desc}>
-Lorem Ipsum is simply dummy text of the printing and typesetting
-</p>
+{pizza.desc}</p>
 </div>
-    </Link>  
     
   )
 }
