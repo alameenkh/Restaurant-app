@@ -24,7 +24,7 @@ export const getServerSideProps = async () => {
   const url =
     "local" === process.env.NEXT_PUBLIC_ENV
       ? "http://localhost:3000/api/products"
-      : "/api/products";
+      : "https://myrestaurant2023.vercel.app/api/products";
       console.log("the url 1", process.env.NEXT_PUBLIC_ENV);
   const res = await axios.get(url);
   console.log("the res is", res);
