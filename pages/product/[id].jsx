@@ -102,9 +102,23 @@ const Product = ({ pizza }) => {
     )
 }
 
+// const url =
+// "development" === process.env.NEXT_PUBLIC_ENV
+//   ? `http://localhost:3000/api/products/`
+//   : `api/products/`;
+//   console.log("the url 2", url, process.env.NEXT_PUBLIC_ENV);
+
+
 export const getServerSideProps = async ({ params }) => {
+
+    const url =
+    "local" === process.env.NEXT_PUBLIC_ENV
+      ? `http://localhost:3000/api/products/${params.id}`
+      : `https://restaurant-app-coral.vercel.app/api/products/${params.id}`;
+      console.log("the url 2", url);
+
     const res = await axios.get(
-        `http://localhost:3000/api/products/${params.id}`
+        url
     );
     return {
         props: {

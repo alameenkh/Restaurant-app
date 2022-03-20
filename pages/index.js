@@ -21,7 +21,12 @@ export default function Home({pizzaList}) {
 
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api/products");
+  const url =
+    "local" === process.env.NEXT_PUBLIC_ENV
+      ? "http://localhost:3000/api/products"
+      : "https://restaurant-app-coral.vercel.app/api/products";
+      console.log("the url 1", process.env.NEXT_PUBLIC_ENV);
+  const res = await axios.get(url);
   console.log("the res is", res);
   return {
     props: {
